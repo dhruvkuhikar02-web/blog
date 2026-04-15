@@ -3,7 +3,7 @@ import hero from '../assets/hero.jpg'
 
 const Hero = () => {
   return (
-    <section className='h-[70vh] md:h-[90vh]  relative'>
+    <section className='h-[70vh] md:h-[90vh] z-0 relative'>
         <div className="h-full w-full">
             <img src={hero} alt="hero section" className='h-full w-full object-fill brightness-[60%]'/>
         </div>

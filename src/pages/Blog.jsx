@@ -72,7 +72,7 @@ const totalpage = Math.ceil(sortbytype.length/itemperpage)
           </select>
         </div>
       </div>
-      <div className="categories  mt-6 shadow-sm h-full w-full">
+      <div className="categories flex overflow-x-auto mb-3 whitespace-nowrap scrollbar-hide  mt-6 shadow-sm h-full">
         {categories.map((c)=> (
           <button className={`${filtervalue === c.value ? 'bg-blue-600 text-white' :''} font-semibold px-5 py-1 rounded-md`} key={c.value} value={c.value} onClick={(e)=>setfiltervalue(e.target.value)}>{c.name}</button>
         ))}
@@ -81,7 +81,7 @@ const totalpage = Math.ceil(sortbytype.length/itemperpage)
       
       <div className="grid grid-cols-2 gap-3 md:flex md:flex-wrap md:w-full ">
         {sortbytype.slice(startindex,lastindex).map((b)=>{
-          return <Blogcart key={b.id} title={b.title} hero={hero} id={b.id} description={`${b.body.slice(0,90)}...`} views={b.views} tag={b.tags[0]}/>
+          return <Blogcart key={b.id} title={b.title} image={b.image} id={b.id} description={`${b.body.slice(0,90)}...`} views={b.views} tag={b.tags[0]}/>
         })}
         </div>
        

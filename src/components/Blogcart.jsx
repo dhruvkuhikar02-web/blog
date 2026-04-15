@@ -2,12 +2,12 @@ import React from 'react'
 import hero from '../assets/hero.jpg'
 import { Link } from 'react-router-dom'
 
-const Blogcart = ({ hero, title, description, tag, views,id, author}) => {
+const Blogcart = ({ image, title, description, tag, views,id, author}) => {
     
     return (
       <Link to={`/blog/${id}`}>  <article className='h-full w-[200px] md:h-[400px] my-3 rounded-md overflow-hidden md:w-[350px] shadow-md hover:scale-[1.03] transition-all '>
             <div className="w-full h-[47%]">
-                <img src={hero} alt="" className='h-full w-full' />
+                <img src={image} alt="blog detail" className='h-full w-full' />
             </div>
             <div className="details py-2 px-2 md:py-4 md:px-4">
                 <div className=" items-center min-h-[130px] md:min-h-[150px]">
